@@ -1,6 +1,7 @@
 /* eslint-disable  */
 //TYPES
 import type { GetServerSideProps } from "next";
+import dynamic from "next/dynamic";
 import { MyPageComponent } from "../src/types/generic";
 
 // MAIN
@@ -10,11 +11,13 @@ import { useTranslation } from "next-i18next";
 
 // Components
 import MainLayout from "src/components/layout/main";
-import CountryList from "src/components/page/index/country_list";
-import Options from "src/components/page/index/options";
+
+const Options = dynamic(() => import("src/components/page/index/options"), { ssr: false });
+const CountryList = dynamic(() => import("src/components/page/index/country_list"), { ssr: false });
 
 // HOOKS
 import useFetch from "src/hooks/use_fetch";
+import MyErrorBoundary from "src/components/common/boundry";
 
 const Home: MyPageComponent = () => {
   const fetch = useFetch<any[]>({ url: "/all" });
@@ -30,8 +33,12 @@ const Home: MyPageComponent = () => {
       <div className=''>
         <div className='my-container'>
           <div className='tw-flex tw-flex-col tw-gap-8'>
-            <Options fetch={fetch} />
-            <CountryList fetch={fetch} />
+            <MyErrorBoundary>
+              <Options fetch={fetch} />
+            </MyErrorBoundary>
+            <MyErrorBoundary>
+              <CountryList fetch={fetch} />
+            </MyErrorBoundary>
           </div>
         </div>
       </div>
