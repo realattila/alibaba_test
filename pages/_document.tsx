@@ -25,7 +25,21 @@ class MyDocument extends Document {
 
     return (
       <Html className={`${isDark ? "tw-dark" : ""}`}>
-        <Head />
+        <Head>
+          <script async src={`https://www.googletagmanager.com/gtag/js?id=G-WKJ9B8V7V0`} />
+          <script
+            dangerouslySetInnerHTML={{
+              __html: `
+                                window.dataLayer = window.dataLayer || [];
+                                function gtag(){dataLayer.push(arguments);}
+                                gtag('js', new Date());
+                                gtag('config', 'G-WKJ9B8V7V0', {
+                                page_path: window.location.pathname,
+                                });
+                            `,
+            }}
+          />
+        </Head>
         <body>
           <Main />
           <NextScript />
