@@ -1,3 +1,16 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+/* Custom Styles */
+.my-container {
+  @apply md:tw-container md:tw-mx-auto;
+}
+
+.my-grid {
+  @apply tw-grid tw-grid-cols-12 tw-gap-4;
+}
+
+.content-loading {
+  @apply tw-bg-gray-300 tw-animate-pulse;
+}

@@ -4,4 +4,6 @@ module.exports = {
     extend: {},
   },
   plugins: [],
+  prefix: "tw-",
+  darkMode: "class",
 };

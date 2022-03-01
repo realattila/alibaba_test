@@ -1,0 +1,10 @@
+{
+  "header": {
+    "title": "Where is the World?",
+    "darkMode": {
+      "dark": "DarkMode",
+      "light": "LightMode"
+    }
+  },
+  "errorOnData": "Error on Fetching Data"
+}

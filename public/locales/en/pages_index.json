@@ -1,0 +1,19 @@
+{
+  "search": "Search for a country...",
+  "countryList": {
+    "card": {
+      "population": "Population",
+      "region": "Region",
+      "capital": "Capital"
+    }
+  },
+  "filter": {
+    "title": "Filter by Region",
+    "africa": "Africa",
+    "america": "America",
+    "asia": "Asia",
+    "europe": "Europe",
+    "oceania": "Oceania"
+  },
+  "title": "Where is the World?"
+}

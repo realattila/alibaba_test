@@ -1,8 +1,24 @@
-import '../styles/globals.css'
-import type { AppProps } from 'next/app'
+/* eslint-disable  */
+import type { AppProps } from "next/app";
+import { appWithTranslation } from "next-i18next";
+import { RecoilRoot } from "recoil";
+
+// STYLES
+import "../styles/globals.css";
 
 function MyApp({ Component, pageProps }: AppProps) {
-  return <Component {...pageProps} />
-}
+  const getLayout = (Component as any).getLayout;
 
-export default MyApp
+  const RenderComponent = () => {
+    return !!getLayout ? getLayout(<Component {...pageProps} />) : <Component {...pageProps} />;
+  };
+
+  return (
+    <>
+      <RecoilRoot>
+        <RenderComponent />
+      </RecoilRoot>
+    </>
+  );
+}
+export default appWithTranslation(MyApp);

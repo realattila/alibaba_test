@@ -1,0 +1,14 @@
+{
+  "back": "Back",
+  "details": {
+    "nativeName": "Native Name: ",
+    "population": "Population: ",
+    "region": "Region: ",
+    "subRegion": "Sub Region: ",
+    "capital": "capital: ",
+    "topLevelDomain": "Top Level Domain: ",
+    "currencies": "Currencies: ",
+    "languages": "Lagunages: ",
+    "borderCountries": "Border Countries: "
+  }
+}
