@@ -25,5 +25,6 @@ module.exports = {
       "error",
       { allowTestingFrameworkSetupHook: "beforeEach" },
     ],
+    "@typescript-eslint/no-explicit-any": "off",
   },
 };
