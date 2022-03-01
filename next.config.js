@@ -21,7 +21,7 @@ const nextConfig = {
       utility: path.join(__dirname, "./src/utility"),
       static: path.join(__dirname, "./public"),
       styles: path.join(__dirname, "./public/styles"),
-      icons: path.join(__dirname, "./public/icons"),
+      icons: path.join(__dirname, "./src/icons"),
       images: path.join(__dirname, "./public/images"),
     };
 

@@ -26,7 +26,7 @@
       "static/*": ["./public/*"],
       "styles/*": ["./public/styles/*"],
       "images/*": ["./public/images/*"],
-      "icons/*": ["./public/icons/*"]
+      "icons/*": ["./src/icons/*"]
     }
   },
   "include": ["next-env.d.ts", "**/*.ts", "**/*.tsx"],

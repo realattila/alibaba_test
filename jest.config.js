@@ -16,4 +16,5 @@ module.exports = {
       statements: 100,
     },
   },
+  moduleDirectories: ["node_modules", "src", "."],
 };

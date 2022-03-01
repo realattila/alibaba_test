@@ -1,6 +1,20 @@
 {
   "extends": "./tsconfig.json",
   "compilerOptions": {
-    "jsx": "react-jsx"
+    "jsx": "react-jsx",
+    "baseUrl": ".",
+    "paths": {
+      "src/*": ["./src/*"],
+      "components/*": ["./src/components/*"],
+      "store/*": ["./src/store/*"],
+      "services/*": ["./src/services/*"],
+      "api/*": ["./src/api/*"],
+      "hooks/*": ["./src/hooks/*"],
+      "utility/*": ["./src/utility/*"],
+      "static/*": ["./public/*"],
+      "styles/*": ["./public/styles/*"],
+      "images/*": ["./public/images/*"],
+      "icons/*": ["./src/icons/*"]
+    }
   }
 }
